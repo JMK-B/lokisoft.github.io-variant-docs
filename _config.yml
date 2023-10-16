@@ -32,12 +32,14 @@ theme: null
 plugins:
   - jekyll-feed
 
+
+include:
+ - apis
+ 
 collections:
-  getting-started:
+  - getting-started:
     output: true
-  developing-unite-server-applications:
-    output: true
-  apis:
+  - developing-unite-server-applications:
     output: true
 
 # Exclude from processing.
