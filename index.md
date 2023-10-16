@@ -5,8 +5,8 @@
   - Architecture (How files are stored)
   - Deployment
   - Subscription Management
-- [Getting started](variant-docs/getting-started/getting-started.md)
-- [Developing Unite Server applications]((./developing-unite-server-applications/developing-unite-server-applications.md)
+- [Getting started](./getting-started/getting-started.md)
+- [Developing Unite Server applications](./developing-unite-server-applications/developing-unite-server-applications.md)
 - API reference
   - Updating GIT tokens
   - Adding Primary class extension packages extensions
