@@ -6,7 +6,11 @@
   - Deployment
   - Subscription Management
 - [Getting started](getting-started/getting-started.md)
+- [Getting started](getting-started/getting-started.md)
 - [Developing Unite Server applications](./developing-unite-server-applications/developing-unite-server-applications.md)
+- [Developing Unite Server applications](/developing-unite-server-applications/developing-unite-server-applications.md)
+- [Developing Unite Server applications]({{site.baseurl}}/./developing-unite-server-applications/developing-unite-server-applications.md)
+- [Developing Unite Server applications]({{site.baseurl}}developing-unite-server-applications/developing-unite-server-applications.md)
 - API reference
   - Updating GIT tokens
   - Adding Primary class extension packages extensions
