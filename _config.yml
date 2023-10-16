@@ -32,11 +32,9 @@ theme: null
 plugins:
   - jekyll-feed
 
-
-include:
- - getting-started
-
 collections:
+  apis:
+    output: true
   getting-started:
     output: true
   developing-unite-server-applications:
