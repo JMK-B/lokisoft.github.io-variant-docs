@@ -1,15 +1,17 @@
 # The Unite Server platform
 
-- OVerview:
+- Overview:
 - Your subscription
   - Architecture (How files are stored)
   - Deployment
-- Getting started
-- Developing Unite Server applications
+  - Subscription Management
+- [Getting started](getting-started/getting-started.md)
+- [Developing Unite Server applications](developing-unite-server-applications/developing-unite-server-applications.md)
 - API reference
   - Updating GIT tokens
-  - Adding Primary class extension packagesextensions
-  -
+  - Adding Primary class extension packages extensions
+- Extension package docs
+
 - Examples / How to
   - Authentication
   - Caching
