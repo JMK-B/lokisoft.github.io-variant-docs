@@ -1,5 +1,6 @@
 # Developing Unite Server applications
 
+
 ## Creating a application
 
 ## A brief anatomy of a Unite service application
@@ -21,6 +22,8 @@
 ## The Unite YAML development language
 
 Overview
+
+
 
 ### Schema
 
