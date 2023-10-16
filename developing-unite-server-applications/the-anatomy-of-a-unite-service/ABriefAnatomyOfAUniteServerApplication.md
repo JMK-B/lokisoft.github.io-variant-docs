@@ -1,4 +1,4 @@
-<!-- TOC tocDepth:2..3 chapterDepth:2..6 -->
+<!-- TOC tocDepth:2..3 chapterDepth:2..6 
 
 - [A Brief Anatomy Of A UniteServer Application](#a-brief-anatomy-of-a-uniteserver-application)
   - [Overview and start up sequence](#overview-and-start-up-sequence)
@@ -20,7 +20,7 @@
 
 # A Brief Anatomy Of A UniteServer Application
 
-Unite server is development platform which basically converts a set of YAML files, resource files and code into .zip files that can either be run as An Azure Function App or a containerised app. It is the aim of this document to give a brief overview of each of the constituent parts, data structures and message flows.
+Unite server is development platform which basically converts a set of YAML files, resource files and code into .zip files that can either be run as an Azure Function App or a containerised app. It is the aim of this document to give a brief overview of each of the constituent parts, data structures and message flows.
 
 - Overview
 - Design principals

@@ -102,6 +102,8 @@ There are 3 different pipe definitions / types:
 
 All of the keys below can be placed under the replacements or defaults property of its pipe.
 
+> Note: All pipes when executed return either: Success, NotExecuted or Failed.
+
 ### Variant Pipe
 
 | Key           | Type   | Required | Description                                                                                                                  |
@@ -115,12 +117,14 @@ Derived from VariantPipe and includes includes all the properties that that expo
 
 | Key                     | Type               | Required | Description                                                                                                            |
 | ----------------------- | ------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------- |
-| CAN_EXECUTE_EXPRESSION  | string             | No       | The unique identifier of the strategy. e.g. "${MyValue} == true                                                        |
+| CAN_EXECUTE_EXPRESSION  | string             | No       | The unique identifier of the strategy. e.g. "${MyValue}" == true                                                        |
 | CAN_EXECUTE_STRATEGY    | strategy           | No       | A strategy that is derived from the ICanExecuteStrategy interface. Allows for a more business specific run conditions. |
 | EXECUTION_FLOW_STRATEGY | strategy           | No       | Provides a granular approach for return values: outcome, error message & error id dependent on the ContinuationPolicy. |
 | CONTINUATION_POLICY     | ContinuationPolicy | No       | Determines execution flow dependent on pipe result                                                                     |
 
 ### Variant Conditional Scoped Pipe
+
+Derived from VariantConditionalPipe and includes includes all the properties that that exposes.
 
 | Key          | Type  | Required | Description                 |
 | ------------ | ----- | -------- | --------------------------- |
@@ -132,5 +136,9 @@ Derived from VariantPipe and includes includes all the properties that that expo
 | ---------------- | ------ | ------------------------------------------------------------------------------------------------------- |
 | Default          | string | Execution continues unless there are errors. On an error the pipeline execution stops at that pipe line |
 | ReturnIfExecuted | string | If the pipe runs then no other peer pipes are executed in the pipeline                                  |
-| ContinueOnError  | string | Continues onto the next pipe even if the pipe errored.                                                  |
+| ReturnIfNotExecuted | string | If the pip is not executed then no other peer pipes are executed in the pipeline                                  |
 | ReturnOnSuccess  | string | Stops execution of any further pipes in the pipeline if the pipe was successful. i.e. Outcome != Failed |
+| ContinueOnNotExecuted  | string |Allows continuation when pipe execution returns NotExecuted.                                                |
+| ContinueOnError  | string | Continues onto the next pipe even if the pipe errored.                                                  |
+
+

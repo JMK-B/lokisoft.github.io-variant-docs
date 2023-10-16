@@ -1,6 +1,5 @@
 # Developing Unite Server applications
 
-
 ## Creating a application
 
 ## A brief anatomy of a Unite service application
@@ -35,6 +34,8 @@ Overview
     - Pipe execution
     - Grouped pipes
     - Specializations
+
+
 
 ## Extension packages
 
