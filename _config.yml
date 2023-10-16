@@ -34,7 +34,7 @@ plugins:
 
 
 include:
- - apis
+ - getting-started
 
 collections:
   getting-started:
