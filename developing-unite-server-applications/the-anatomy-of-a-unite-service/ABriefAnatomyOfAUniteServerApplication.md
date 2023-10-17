@@ -18,9 +18,63 @@
 
 <!-- /TOC -->
 
-# A Brief Anatomy Of A UniteServer Application
+# A Brief Anatomy Of A UniteServer Application / Service
 
-Unite server is development platform which basically converts a set of YAML files, resource files and code into .zip files that can either be run as an Azure Function App or a containerised app. It is the aim of this document to give a brief overview of each of the constituent parts, data structures and message flows.
+Unite server is development platform which basically converts a set of YAML files, resource files and code into .zip files that can be configured to  either  run as an Azure Function App or a containerised app. It is the aim of this document to give a brief overview of each of the constituent parts, data structures and message flows.
+
+## Architecture:
+
+A Unite Server Application is a modified Microsoft .Net core application. This application, rather than being built from a standard set of, say C# files, is built by combining different types of text and assembly files into a single zip file that can be run as either an Azure Function App or containerised app.
+
+The file that make up a Unite Server App are: 
+
+* A Runtime
+* Extension packages
+* Configuration files
+* YAML code files
+* Reference files
+
+When an application is deployed or a release created, The Unite development platform combines each of these files into a single deployable .Net Core runtime zip file. 
+
+### The Runtime
+
+The runtime is a versionable set of core files which each application is deployed with to create a runnable application.  Unite currently offers 2 different runtimes that an application can hosted in: An Azure Function App or a containerised app. Each of these 'hosting' options provide the following features:
+
+* Http endpoint capabilities
+* Background hosting services
+* Logging & Instrumentation
+* Configuration and substitution management
+* Inline code compilation
+
+
+### Extension packages
+
+There are 2 types of extension packages: primary and secondary and 2 ifferent types of extension package repositories: public and private. Primary extension packages contain .Net assembly packages XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX provide a way for the platform to integrate with .Net code and library packages through specific base classes. Once these are built the assemblies can be uploaded to the platform 
+
+> Note: For a more details explanation on extension packages and the different types of package repositories see the (Extension Packages)[xx] section.  
+
+### Configuration files
+
+There are 4 different configuration files used in a Unite service:
+
+* **appsetings.json**: As it's name sugguests, this is a configuration file and of the same format and schema as a standard .Net core settings file.
+* **local.settings.json**: This is a settings file which is only used when developing the application. It is not included in any release zip file.
+* **site-config.json**:  this is a project file and keeps track of any extension packages added as well as other deployment information. in general, you should not need to edit this file manually. 
+* **service.yaml**: This file contains the configuration of any startup services the application needs. These include, but are not limited to: any external application settings configuration stores that are needed, as well as Uniite development services that are required for the development environment. 
+
+### YAML code files
+
+
+
+
+
+
+
+
+
+
+
+
 
 - Overview
 - Design principals
