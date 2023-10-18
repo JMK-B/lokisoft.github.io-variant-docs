@@ -42,16 +42,19 @@ The runtime is a versionable set of core files which each application is deploye
 
 * Http endpoint capabilities
 * Background hosting services
-* Logging & Instrumentation
+* Logging & instrumentation
 * Configuration and substitution management
 * Inline code compilation
 
 
 ### Extension packages
 
-There are 2 types of extension packages: primary and secondary and 2 ifferent types of extension package repositories: public and private. Primary extension packages contain .Net assembly packages XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX provide a way for the platform to integrate with .Net code and library packages through specific base classes. Once these are built the assemblies can be uploaded to the platform 
-
-> Note: For a more details explanation on extension packages and the different types of package repositories see the (Extension Packages)[xx] section.  
+Extension Packages are descreet library components that are importrf into an application to add different types of functionality to the core runtime. This functionality can include:
+* A self contained applet which does not required any new YAML code files
+* A prebuilt set of YAMLised connectors, pipes & strategies that can be configured directly in the application. Examples of these include libraries for Azure Management, Libraries that connect directly
+* The ability to extend the platform through new .Net Core code. This code, based from classes found in the Unite framework assemblies,  would be uploaded to the platform and the platform would create the necessary Yaml metadata files to allow the functionality to be called the YAML code files directly.
+* New substitution methods that are run in the subsitution service.
+* The ability to quickly share code snippets between projects promoting the reuse of code artifacts at any granular level.
 
 ### Configuration files
 
@@ -64,11 +67,47 @@ There are 4 different configuration files used in a Unite service:
 
 ### YAML code files
 
+Work is done By Unite applications by processing inndividual messages through a series of pipes called a... pipeline. These messages are created by connectors with the relevent state or data and then passed down the pipeline to be processed. Where the connector is a request-reply connector,such as an Http endpoint, the connector takes the relevent data from the message and returns that to the caller.  In Unite, pipes
 
 
 
 
 
+
+> Note: Messages can also be created in strategies  which often contain there own pipelines. These are normally called scoped pipes
+
+
+
+
+Unite applications work on the idea of a message that is processed through a series of pipes i.e. a pipeline. That message is created by a certain event or timer and that message then flows down the pipes being processed and updated by each pipe as and when required.
+
+
+
+ pipelines where pipes are a specific pieice of work that is performedcccc
+
+Yaml code files are where the applications are configured through the use of 4 different types of objects:
+* Strategies
+* Connectors
+* Endpoints
+* Pipes
+
+### Strategies
+Unite applications are built using an intent first coding principal. This is analogous to interfaces in classes found in programming languages such as Java & c#. Strategies, in this context, relate to class impomentations of certain technologies. However
+
+#### Connectors
+There are 2 types of connectors:
+Timers: 
+Listeners:
+
+Listeners
+
+#### Endpoints
+These are distint endpoint specifications that use the HTTP protocol e.g. https://apps.bluepear.co.uk/api/myendpoing?state=123. . configured in YAML but are actually called by a runtime specific http listener connector. 
+
+#### Pipes
+* Pipes are the workhorse of an Unite application.
+* Technology specific implmentation fouund in its attached strategies
+*
 
 
 
