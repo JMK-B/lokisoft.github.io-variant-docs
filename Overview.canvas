@@ -1,0 +1,13 @@
+{
+	"nodes":[
+		{"id":"bb1ac137d6165f80","x":160,"y":-1040,"width":350,"height":340,"type":"text","text":"# Introduction\n* Getting Started\n* "},
+		{"id":"6af617a7d1532390","type":"text","text":"Building Variant Applications\n","x":200,"y":-500,"width":400,"height":240},
+		{"id":"d842161151bcff8c","type":"text","text":"A Variant service\n* The UI view\n* Extensions\n* Under the hood\n","x":60,"y":-160,"width":500,"height":240},
+		{"id":"6a2a5a792404017a","x":-680,"y":-600,"width":600,"height":100,"type":"text","text":"# Creating a simple API application\n\n"},
+		{"id":"d67fb5dea39fe1c1","x":-680,"y":-409,"width":600,"height":149,"type":"text","text":"# Variant Services: A UI walkthrough\n\nOnce you click on a service you bring the service configuration and buil pages. This is where you configure, deploy and test your application from.  \n\n*  Service configuration\n\t* Overview\n\t* Test results\n\t* Configuration \n\t* Extensions\n* Service definitions: A list of named YAML files\n* Dependencies\n\t* Lokisoft.Runtime\n\t*  Overview \n\t* menu items\n\t* Test results\n\t* Configuration\n\t\t* appsettings.json\n\t\t* local.settings.json\n\t\t* site-config.json\n\t\t* service.yaml\n\t* Extensions"},
+		{"id":"e0b3b565deec1d5f","x":-40,"y":-1860,"width":675,"height":240,"type":"text","text":"* # INDEX Who is this platform built got"},
+		{"id":"9b3f2e8dd91a40f7","x":-840,"y":-1740,"width":760,"height":460,"type":"text","text":"# Getting Started\n\nVariant is a text based online online development platform which uses both json and YAML to build applications services.   YAML as the 'development language' and json files to configure the applications. \n\nThere are 2 areas withing the development platform :\nEnvironment oriatate and \nService oriientated. \n\n\n"},
+		{"id":"5ea0692a659a8cbf","type":"text","text":"# The Variant Development Platform: A UI walkthrough\nOverview\n* Home \n*  Applications\n\t* All Tests\n\t* Services\n\t\t* Lists all services in your environment\n\t\t* Create new appliucation and delete old ones.\n\t* Source Control\n  * Configuration\n\t  * Vault Settings\n\t  * Environment Settings\n\n","x":-820,"y":-1200,"width":740,"height":440}
+	],
+	"edges":[]
+}

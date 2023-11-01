@@ -1,0 +1,1 @@
+1. Variant is a Yaml based development platform fot building both Apis and B2B web interfaces

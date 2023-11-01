@@ -46,7 +46,7 @@ This page handles manages source control of your entire subscription assets: con
 
 ### Vault settings
 
-This page shows the vaults settings for this particular Unite environment.
+This page shows the vaults settings for this development platform. If any secure environment settings are required you can create them in environment specific Azure Vaults and add them to the service.yaml found in your application. 
 
 ![](Images/vaultsettings.png)
 
@@ -56,7 +56,7 @@ This page allows appsettings that are shared across multiple services to be conf
 
 ![](Images/Main.GlobalSettings.png)
 
-> Note: The Variant.Environment.Type setting denotes what type of environment the service is running in. This then allows the developer to remove certain implementations, endpoints and connectors from the runtime when they are running in environments such as test and prod.
+> [!Note] The Variant.Environment.Type setting denotes what type of environment the service is running in. This then allows the developer to remove certain implementations, endpoints and connectors from the runtime when they are running in environments such as test and prod.
 
 ## The Services Page
 
@@ -172,7 +172,7 @@ This page is where the default tests are placed. All pipes and endpoints use the
 
 The endpoint paths should not be changed though as the development platform uses this naming convention to call the tests and get the results.
 
-> Note: This file can be deleted and any tests can be placed in any services files.
+> [!Note] This file can be deleted and any tests can be placed in any services files.
 
 ### Dependencies
 
@@ -189,7 +189,7 @@ These are created by the platform when a new extension with a strategies dll is 
 
 #### Hand crafted files
 
-The benefits of these handcrafted file is that its allows pipes and connectors to be created that are an amalgamation of other pipes and connectors and provide reusable components that can include properties that can be left as default or overriden.
+The benefits of these handcrafted file is that its allows pipes and connectors to be created that are an amalgamation of other pipes and connectors and provide reusable components that can include properties that can be left as default or overridden.
 
 The example below is the connector that keeps the app service alive. This is a timer connector that calls an endpoint every n minutes:
 

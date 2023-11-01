@@ -49,7 +49,7 @@ The runtime is a versionable set of core files which each application is deploye
 
 ### Extension packages
 
-Extension Packages are descreet library components that are importrf into an application to add different types of functionality to the core runtime. This functionality can include:
+Extension Packages are descreet library components that are imported into an application to add different types of functionality to the core runtime. This functionality can include:
 * A self contained applet which does not required any new YAML code files
 * A prebuilt set of YAMLised connectors, pipes & strategies that can be configured directly in the application. Examples of these include libraries for Azure Management, Libraries that connect directly
 * The ability to extend the platform through new .Net Core code. This code, based from classes found in the Unite framework assemblies,  would be uploaded to the platform and the platform would create the necessary Yaml metadata files to allow the functionality to be called the YAML code files directly.
@@ -71,12 +71,7 @@ Work is done By Unite applications by processing inndividual messages through a 
 
 
 
-
-
-
-> Note: Messages can also be created in strategies  which often contain there own pipelines. These are normally called scoped pipes
-
-
+> [!Note] Messages can also be created in strategies  which often contain there own pipelines. These are normally called scoped pipes
 
 
 Unite applications work on the idea of a message that is processed through a series of pipes i.e. a pipeline. That message is created by a certain event or timer and that message then flows down the pipes being processed and updated by each pipe as and when required.
