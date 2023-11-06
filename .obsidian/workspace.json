@@ -10,20 +10,17 @@
           {
             "id": "665e46aa7209512b",
             "type": "tabs",
-            "dimension": 63.10329273793415,
+            "dimension": 76.985559566787,
             "children": [
               {
                 "id": "ab37c924ea837965",
                 "type": "leaf",
                 "state": {
-                  "type": "canvas",
+                  "type": "markdown",
                   "state": {
-                    "file": "Overview.canvas",
-                    "viewState": {
-                      "x": 98.0585940302932,
-                      "y": -1061.2811883220463,
-                      "zoom": -0.5922315057961867
-                    }
+                    "file": "TODO.md",
+                    "mode": "source",
+                    "source": false
                   }
                 }
               },
@@ -44,7 +41,7 @@
           {
             "id": "4cace4b642c47f76",
             "type": "tabs",
-            "dimension": 36.89670726206585,
+            "dimension": 23.014440433212997,
             "children": [
               {
                 "id": "be269e34a7a77e8c",
@@ -90,7 +87,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "> Note",
+                "query": "tag:#bug",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -107,7 +104,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -127,7 +125,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "developing-unite-server-applications/developing-unite-server-applications.md",
+                "file": "TODO.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -144,7 +142,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "developing-unite-server-applications/developing-unite-server-applications.md",
+                "file": "TODO.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +165,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "developing-unite-server-applications/developing-unite-server-applications.md"
+                "file": "TODO.md"
               }
             }
           }
@@ -188,19 +186,19 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "be269e34a7a77e8c",
+  "active": "ab37c924ea837965",
   "lastOpenFiles": [
-    "Overview.canvas",
-    "index.md",
-    "TODO.md",
-    "developing-unite-server-applications/developing-unite-server-applications.md",
     "getting-started/the-unite-development-portal/the-unite-development-portal.md",
+    "getting-started/getting-started.md",
+    "index.md",
+    "Overview.canvas",
+    "developing-unite-server-applications/developing-unite-server-applications.md",
+    "TODO.md",
     "developing-unite-server-applications/the-anatomy-of-a-unite-service/ABriefAnatomyOfAUniteServerApplication.md",
     "README.md",
     "The services Page",
     "ddd",
     "getting-started/the-unite-development-portal/Untitled",
-    "getting-started/getting-started.md",
     "getting-started/prerequisites/prerequisites.md",
     "Examples",
     "Business plan/Intro.md",
