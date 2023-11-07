@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "bee0789a6e6afd56",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ToDo.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "75146773a9a6ae98",
             "type": "leaf",
             "state": {
@@ -107,7 +95,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ToDo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +111,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ToDo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -172,7 +158,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "ToDo.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -217,14 +202,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "bee0789a6e6afd56",
+  "active": "1dc264b1b3166fb0",
   "lastOpenFiles": [
+    "ToDo.md",
+    "TODO.md",
+    "Overview.canvas",
+    "Business plan/Intro.md",
+    "Business plan",
     "Documentation/index.md",
     "Documentation/Canvas/Unite documentation.canvas",
     "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/ABriefAnatomyOfAUniteServerApplication.md",
     "Documentation/developing-unite-server-applications/developing-unite-server-applications.md",
     "Documentation/Apis/apis.md",
-    "ToDo.md",
     "Calender",
     "Documentation",
     "Daily notes/2023-10-19.md",
