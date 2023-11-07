@@ -6,7 +6,7 @@ Variant docs
 ---
 --- dd
 
-[index](index.md)
-asdasd
+
+
 ---
 ---

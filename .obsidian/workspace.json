@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Daily notes/2023-10-19.md",
+                "file": "ToDo.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "75146773a9a6ae98",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Documentation/developing-unite-server-applications/developing-unite-server-applications.md",
                 "mode": "source",
                 "source": false
               }
@@ -64,13 +76,21 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "d3d629a9251cbbc3",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
           }
         ],
         "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 361.5
   },
   "right": {
     "id": "5165858eb78fa8f1",
@@ -79,6 +99,7 @@
       {
         "id": "da088585d0a94c4f",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "cc9c6e5201795363",
@@ -86,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Daily notes/2023-10-19.md",
+                "file": "ToDo.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +124,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Daily notes/2023-10-19.md",
+                "file": "ToDo.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +147,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Daily notes/2023-10-19.md"
+                "file": "ToDo.md"
               }
             }
           },
@@ -138,12 +159,12 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
         "id": "b8a6efd5e0cad59b",
         "type": "tabs",
+        "dimension": 50,
         "children": [
           {
             "id": "250aaac7ee0fda20",
@@ -151,7 +172,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Daily notes/2023-10-19.md",
+                "file": "ToDo.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -184,7 +205,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 470.5
+    "width": 868.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,19 +219,27 @@
   },
   "active": "bee0789a6e6afd56",
   "lastOpenFiles": [
-    "getting-started/prerequisites/prerequisites.md",
-    "Canvas/Unite documentation.canvas",
-    "Canvas",
-    "index.md",
+    "Documentation/index.md",
+    "Documentation/Canvas/Unite documentation.canvas",
+    "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/ABriefAnatomyOfAUniteServerApplication.md",
+    "Documentation/developing-unite-server-applications/developing-unite-server-applications.md",
+    "Documentation/Apis/apis.md",
+    "ToDo.md",
+    "Calender",
+    "Documentation",
+    "Daily notes/2023-10-19.md",
+    "Daily notes/2023-11-07.md",
+    "Daily notes/2023-10-20.md",
+    "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/iteration.md",
+    "Documentation/Subscriptions/Your subscription.md",
+    "README.md",
+    "Documentation/Subscriptions",
+    "Documentation/getting-started/prerequisites/prerequisites.md",
+    "Documentation/Canvas",
     "attachments/Pasted image 20231019123222.png",
     "attachments/Pasted image 20231019123236.png",
     "attachments",
-    "Daily notes/2023-11-07.md",
-    "developing-unite-server-applications/the-unite-development-language/programming-concepts/programming-concepts.md",
-    "developing-unite-server-applications/the-unite-development-language/programming-concepts/iteration.md",
-    "Daily notes/2023-10-19.md",
-    "README.md",
-    "ToDo.md",
+    "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/programming-concepts.md",
     "Untitled 1.canvas",
     "Untitled.md",
     "Stuff.md",
@@ -218,8 +247,7 @@
     "xxxx",
     "asd.md",
     "2023-10-19.md",
-    "Daily notes",
-    "developing-unite-server-applications/developing-unite-server-applications.md",
-    "getting-started/getting-started.md"
+    "Calender/Daily notes",
+    "Documentation/getting-started/getting-started.md"
   ]
 }

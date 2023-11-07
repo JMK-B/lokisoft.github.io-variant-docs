@@ -1,0 +1,35 @@
+{
+  "recentFiles": [
+    {
+      "basename": "ToDo",
+      "path": "ToDo.md"
+    },
+    {
+      "basename": "index",
+      "path": "Documentation/index.md"
+    },
+    {
+      "basename": "Unite documentation",
+      "path": "Documentation/Canvas/Unite documentation.canvas"
+    },
+    {
+      "basename": "ABriefAnatomyOfAUniteServerApplication",
+      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/ABriefAnatomyOfAUniteServerApplication.md"
+    },
+    {
+      "basename": "developing-unite-server-applications",
+      "path": "Documentation/developing-unite-server-applications/developing-unite-server-applications.md"
+    },
+    {
+      "basename": "getting-started",
+      "path": "Documentation/getting-started/getting-started.md"
+    },
+    {
+      "basename": "apis",
+      "path": "Documentation/Apis/apis.md"
+    }
+  ],
+  "omittedPaths": [],
+  "maxLength": null,
+  "openType": "tab"
+}
