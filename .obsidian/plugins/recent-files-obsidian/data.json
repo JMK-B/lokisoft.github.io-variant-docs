@@ -1,12 +1,32 @@
 {
   "recentFiles": [
     {
-      "basename": "index",
-      "path": "Documentation/index.md"
+      "basename": "Overview 1",
+      "path": "Overview 1.canvas"
+    },
+    {
+      "basename": "Overview",
+      "path": "Overview.canvas"
     },
     {
       "basename": "Unite documentation",
       "path": "Documentation/Canvas/Unite documentation.canvas"
+    },
+    {
+      "basename": "getting-started",
+      "path": "Documentation/getting-started/getting-started.md"
+    },
+    {
+      "basename": "Intro",
+      "path": "Business plan/Intro.md"
+    },
+    {
+      "basename": "TODO",
+      "path": "TODO.md"
+    },
+    {
+      "basename": "index",
+      "path": "Documentation/index.md"
     },
     {
       "basename": "ABriefAnatomyOfAUniteServerApplication",
@@ -15,10 +35,6 @@
     {
       "basename": "developing-unite-server-applications",
       "path": "Documentation/developing-unite-server-applications/developing-unite-server-applications.md"
-    },
-    {
-      "basename": "getting-started",
-      "path": "Documentation/getting-started/getting-started.md"
     },
     {
       "basename": "apis",
