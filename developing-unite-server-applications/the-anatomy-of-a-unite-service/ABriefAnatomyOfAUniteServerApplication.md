@@ -20,16 +20,16 @@
 
 # A Brief Anatomy Of A UniteServer Application / Service
 
-Unite server is development platform which basically converts a set of YAML files, resource files and code into .zip files that can be configured to  either  run as an Azure Function App or a containerised app. It is the aim of this document to give a brief overview of each of the constituent parts, data structures and message flows.
+Unite server is development platform which basically converts a set of YAML files, resource files and .Net core code into into a working Function App or containerised app.  It is the aim of this document to give a brief overview of each of the constituent parts, data structures and message flows.
 
 ## Architecture:
 
 A Unite Server Application is a modified Microsoft .Net core application. This application, rather than being built from a standard set of, say C# files, is built by combining different types of text and assembly files into a single zip file that can be run as either an Azure Function App or containerised app.
 
-The file that make up a Unite Server App are: 
+The files that make up a Unite Server App are: 
 
-* A Runtime
-* Extension packages
+* The Variant runtime. 
+* Extension packages:  
 * Configuration files
 * YAML code files
 * Reference files
@@ -45,12 +45,12 @@ The runtime is a versionable set of core files which each application is deploye
 * Logging & instrumentation
 * Configuration and substitution management
 * Inline code compilation
+* Base connectors and pipes classes for building additional assembly based extension packages.
 
 
 ### Extension packages
 
-Extension Packages are descreet library components that are imported into an application to add different types of functionality to the core runtime. This functionality can include:
-* A self contained applet which does not required any new YAML code files
+Extension Packages are discreet library components that are imported into an application to add different types of functionality to the core runtime. This functionality can include:
 * A prebuilt set of YAMLised connectors, pipes & strategies that can be configured directly in the application. Examples of these include libraries for Azure Management, Libraries that connect directly
 * The ability to extend the platform through new .Net Core code. This code, based from classes found in the Unite framework assemblies,  would be uploaded to the platform and the platform would create the necessary Yaml metadata files to allow the functionality to be called the YAML code files directly.
 * New substitution methods that are run in the subsitution service.
@@ -67,34 +67,118 @@ There are 4 different configuration files used in a Unite service:
 
 ### YAML code files
 
-Work is done By Unite applications by processing inndividual messages through a series of pipes called a... pipeline. These messages are created by connectors with the relevent state or data and then passed down the pipeline to be processed. Where the connector is a request-reply connector,such as an Http endpoint, the connector takes the relevent data from the message and returns that to the caller.  In Unite, pipes
-
-
-
-> [!Note] Messages can also be created in strategies  which often contain there own pipelines. These are normally called scoped pipes
-
-
-Unite applications work on the idea of a message that is processed through a series of pipes i.e. a pipeline. That message is created by a certain event or timer and that message then flows down the pipes being processed and updated by each pipe as and when required.
-
-
-
- pipelines where pipes are a specific pieice of work that is performedcccc
-
-Yaml code files are where the applications are configured through the use of 4 different types of objects:
-* Strategies
+Unite applications work on the idea of a message that is processed through a series of pipes i.e. a pipeline. That message is created by a certain event or timer and that message then flows down the pipes being processed and updated by each pipe as and when required.  Unite determines where these messages come from and configured through 4 different types of objects:
 * Connectors
 * Endpoints
 * Pipes
+* Strategies
+
+## Connectors:
+
+An application can contain multiple inbound connectors. and these fall into 2 categories:
+
+- **Listeners**: Waits for to external systems to contact it. Implementation examples include: an HTTP endpoints,, Service bus listeners an endpoint connected to Twitter or a web sockets.
+- **Timers**: Interval or schedule timers can be connected to intents that pull a single message or multiple messages and then process those items or just fire off an instruction to start off another type of process. Example of these include reading a database for a list of users to perform some action on each or polling a queue for messages
+
+Below are examples of 2 connectors that are found in the default service StartUp page.
+
+![](Images/connectors.png)
+
+The **AzureFunctionIsolatedConnector** is the primary API endpoint connector for managing API calls using functionsApps. All API calls go through this connector and are routed on the their specific API endpoint.
+
+The second **KeepAliveConnector** is a function app only connector and is used to stop any function apps hosted in a consumption plan from shutting down
+
+## Endpoints
+
+Endpoints are routed HTTP connections. That the runtime calls via the AzureFunctionIsolatedConnector , when it's an Azure Function App or the API KestrelConnector when creating containerized apps. These lisiteners are configured differently to normal connectors but they have the same pipeline property that works the same as the connectors pipeline:
+
+An endpoint can also describe the request, queries, headers and response properties as seen above. These allow for both the OpenApi specification to be generated adn inputs validated. An example of this is seen below:
+
+![](Images/endpoints.png)
+
+## Pipes and strategies
+
+Pipes are placed in a pipeline and perform actions based on their intent. In the core framework there are multiple intent pipes each with multiple strategies (implementations). Examples of the types of intents are
+
+- PushMessage: Pushes data to somewhere. Strategies include: HTTP call, file writer, databases upserts, Azure storage, etc.
+
+- PullMessagesPipe: pulls a list of messages from a somewhere. Strategies available include :database, file directory, Azure Storage etc.
+
+- ForEachMessagePipe: This uses PullMessage implementations and allows the iteration of messages pulled from the specified strategies.
+
+- PullSingleMessagePipe: As above but only deals with a single message
+
+- ModifyMessagePipe: This can be used to update the UniteMessage. Examples include encryption and decryption, compression, converting a message to and from a JSON string, adding new values values.
+- AggregatePipe: Helpful when aggregating data. Examples include: StringBuilderAggregate, JArrayAggregate.
+
+If we look at 2 examples of the PushMessagePipe we see that the implementation is denoted in the strategy property:
+
+![](Images/pipes.png)
+
+This notation can be a bit long winded so when strategies are imported from .Net assemblies the importer creates a specialised version of each strategy that includes the the strategy name in the pipe. This allows the developer to use this simplified version and reduce the number of lines of code. Examples of the are:
+
+![](Images/pipesIncStrategies.png)
+
+The above pipes also include default values. If we are ok with the default values then we can remove them so the code would now look like:
+
+N.B. The actual pipes and strategies have many more default values however, for brevity, these have been removed.
+
+![](Images/pipesIncStrategiesWithDefaultsRemoved.png)
+
+The above examples where each pipe name contains the strategy name are examples of specialisations. Specialisations are critical when developing applications and provide a multitude of benefits.
+
+
 
 ### Strategies
-Unite applications are built using an intent first coding principal. This is analogous to interfaces in classes found in programming languages such as Java & c#. Strategies, in this context, relate to class impomentations of certain technologies. However
+Unite applications are built using an intent first coding principal. This is analogous to interfaces in classes found in programming languages such as Java & c#. Strategies, in this context, relate to class implementations of certain technologies. Strategies however, will either be wrapped by either a pipe or connector, or found as an additional 'injected' implementation of either a pipe or connector.  Examples of strategies include the HttpPushStrategy, AzureblockBlobPushStrategy, AzureTablePullMessagesStrategy, etc. 
 
 #### Connectors
-There are 2 types of connectors:
-Timers: 
-Listeners:
+Connectors are the starting point of all message flows within Unite and boil down 2 basic types: 
+* Timers
+* Listeners
+#### Timers
 
-Listeners
+Timers fire a single message either at a scheduled time or after a certain period of time.  There are currently  4 different types of timer connectors available: TimerConnector,  TimerWithPullMessagesConnector, ScheduleTimerConnector and CronTimerConnector. Each of these are have corresponding .NET Core classes which they are built from.  Examples of how vanilla timer connectors are implemented can be seen below:
+
+```yaml
+connections:
+
+    - connector: Variant.Core.TimerConnector
+      DUE_TIME: 0:0:01
+      IGNORE_EVENT_IF_PROCESSING: True
+      POLLING_INTERVAL: 00:00:15
+      pipeline:
+        - ADD_PIPE_COLLECTION_HERE
+
+    - connector: Variant.Core.TimerWithPullMessagesConnector
+      PULL_MESSAGES: 
+        strategy: Variant.AzureStorage.BlockBlobPullMessages
+        PREFIX_FILTER: /mydir
+        ACCOUNT_NAME: ${+AzureAccountName}
+        ACCOUNT_KEY: ${+AzureAccountKey}
+        CONTAINER_NAME: myContainer
+        NAMESPACE: AzureStorage
+      DUE_TIME: 0:0:01
+      IGNORE_EVENT_IF_PROCESSING: True
+      POLLING_INTERVAL: 00:00:15
+      MAXIMUM_ERROR_COUNT: -1
+      BATCH_SIZE: 10
+      pipeline:
+        - ADD_PIPE_COLLECTION_HERE
+
+  - connector: Variant.Timers.CronTimerConnector
+    CRON_EXPRESSION_STRING: */5 * * * *
+    INCLUSIVE: False
+    RUN_ON_STARTUP: True
+    INCLUDE_SECONDS: False
+    pipeline:
+      - ADD_PIPE_COLLECTION_HERE
+```
+
+
+> [!NOTE] 
+> From runtime v1.1, all timers bar 
+
 
 #### Endpoints
 These are distint endpoint specifications that use the HTTP protocol e.g. https://apps.bluepear.co.uk/api/myendpoing?state=123. . configured in YAML but are actually called by a runtime specific http listener connector. 
@@ -102,7 +186,7 @@ These are distint endpoint specifications that use the HTTP protocol e.g. https:
 #### Pipes
 * Pipes are the workhorse of an Unite application.
 * Technology specific implmentation fouund in its attached strategies
-*
+ *
 
 
 
@@ -164,60 +248,6 @@ The three main areas of the messages are:
 - Payload: This is where the actual data of the message is stored. UniteMessage can actually handle multiple data items - called message parts - and Payload is the first one in the list.
 
 - CreateSpawnedMessage() & IsSpawnedMessage: When a UniteMessage is created it may create other UniteMessages - PullMessages is a good example of this - and may need to enumerate them. Each additional message should be tied to its creator, for correlation purposes, and its this method and property which allows it.
-
-## Connectors:
-
-An application can contain multiple inbound connectors. and these fall into 2 categories:
-
-- **Listeners**: Waits for to external systems to contact it. Implementation examples include: an HTTP endpoints,, Service bus listeners an endpoint connected to Twitter or a web sockets.
-- **Timers**: Interval or schedule timers can be connected to intents that pull a single message or multiple messages and then process those items or just fire off an instruction to start off another type of process. Example of these include reading a database for a list of users to perform some action on each or polling a queue for messages
-
-Below are examples of 2 connectors that are found in the default service StartUp page.
-
-![](Images/connectors.png)
-
-The **AzureFunctionIsolatedConnector** is the primary API endpoint connector for managing API calls using functionsApps. All API calls go through this connector and are routed on the their specific API endpoint.
-
-The second **KeepAliveConnector** is a function app only connector and is used to stop any function apps hosted in a consumption plan from shutting down
-
-## Endpoints
-
-Endpoints are routed HTTP connections. That the runtime calls via the AzureFunctionIsolatedConnector , when it's an Azure Function App or the API KestrelConnector when creating containerized apps. These lisiteners are configured differently to normal connectors but they have the same pipeline property that works the same as the connectors pipeline:
-
-An endpoint can also describe the request, queries, headers and response properties as seen above. These allow for both the OpenApi specification to be generated adn inputs validated. An example of this is seen below:
-
-![](Images/endpoints.png)
-
-## Pipes and strategies
-
-Pipes are placed in a pipeline and perform actions based on their intent. In the core framework there are multiple intent pipes each with multiple strategies (implementations). Examples of the types of intents are
-
-- PushMessage: Pushes data to somewhere. Strategies include: HTTP call, file writer, databases upserts, Azure storage, etc.
-
-- PullMessagesPipe: pulls a list of messages from a somewhere. Strategies available include :database, file directory, Azure Storage etc.
-
-- ForEachMessagePipe: This uses PullMessage implementations and allows the iteration of messages pulled from the specified strategies.
-
-- PullSingleMessagePipe: As above but only deals with a single message
-
-- ModifyMessagePipe: This can be used to update the UniteMessage. Examples include encryption and decryption, compression, converting a message to and from a JSON string, adding new values values.
-- AggregatePipe: Helpful when aggregating data. Examples include: StringBuilderAggregate, JArrayAggregate.
-
-If we look at 2 examples of the PushMessagePipe we see that the implementation is denoted in the strategy property:
-
-![](Images/pipes.png)
-
-This notation can be a bit long winded so when strategies are imported from .Net assemblies the importer creates a specialised version of each strategy that includes the the strategy name in the pipe. This allows the developer to use this simplified version and reduce the number of lines of code. Examples of the are:
-
-![](Images/pipesIncStrategies.png)
-
-The above pipes also include default values. If we are ok with the default values then we can remove them so the code would now look like:
-
-N.B. The actual pipes and strategies have many more default values however, for brevity, these have been removed.
-
-![](Images/pipesIncStrategiesWithDefaultsRemoved.png)
-
-The above examples where each pipe name contains the strategy name are examples of specialisations. Specialisations are critical when developing applications and provide a multitude of benefits.
 
 ## Specialisations (Derivatives)
 

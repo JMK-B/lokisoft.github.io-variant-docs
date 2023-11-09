@@ -9,6 +9,7 @@ This will be done in 4 parts where we first create a blank service and deploy it
   - [Step 2: Calling an external Http endpoint](#step-2-calling-an-external-http-endpoint)
   - [Step 3: Returning regional dates only with caching and retries](#step-3-returning-regional-dates-only-with-caching-and-retries)
   - [Step 4: Adding the option to return the dates as CSV](#step-4-adding-the-option-to-return-the-dates-as-csv)
+  - [Step 4: Adding the option to return the dates as CSV](## step-4-adding-the-option-to-return-the-dates-as-csv)
 
 ## Step 1: Creating and deploying a templated Unite (Function App) into Azure
 

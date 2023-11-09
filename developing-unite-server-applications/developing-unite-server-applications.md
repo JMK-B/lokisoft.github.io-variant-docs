@@ -18,9 +18,24 @@
     - .Net Assemblies & YAML
     - YAML Only
 
+A Variant aApplication
+
+Overview
+Variant creates applications called Variant applications. These can be either workflow applications, such as event driven or timer driven applications or 
+
 ## The Unite YAML development language
 
 Overview
+
+Connectors, Endpoint, Pipes & Strategies
+
+A Variant Application
+
+A Variant application is made from configuration files, Code / YAML files, a Host  Runtime and extensions, or API applications. 
+
+
+Endpoints:
+Endpoints are not called directly by the runtime but handled by the host runtime providing a HttpConnector endpoint and then by a WebApi strategy. This strategy contains has hooks to all  the endpoints in the application and then, depennding on the URL and Method type, calls the correct endpoint pipeline. 
 
 
 
