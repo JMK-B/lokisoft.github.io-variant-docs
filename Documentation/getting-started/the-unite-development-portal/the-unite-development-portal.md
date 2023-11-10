@@ -36,7 +36,7 @@ This page is for building deleting and configuring each service. The default pag
 
 ![](Main.Service.png)
 
-For details on a speicifc applications service page click [here](#the-services-page).
+For details on a specific applications service page click [here](#the-services-page).
 
 ### Source control
 
@@ -56,7 +56,7 @@ This page allows appsettings that are shared across multiple services to be conf
 
 ![](Main.GlobalSettings.png)
 
-> [!Note] The Variant.Environment.Type setting denotes what type of environment the service is running in. This then allows the developer to remove certain implementations, endpoints and connectors from the runtime when they are running in environments such as test and prod.
+> [!Note] The Variant.Environment.Type setting denotes what type of environment the service is running in. This then allows the developer to remove certain implementations, endpoints and connectors from the runtime when they are running in environments such as test and prod. 
 
 ## The Services Page
 
