@@ -1,8 +1,43 @@
-# The Unite YAML Development Language
+# The Unite YAML Development Language Reference guide
 
-This article provides guidance on the Unite development language and how it is built around the reuse through object specialization. After reading this article you should have an understanding around the coding principals of Unite and the ability to build complex applications easily.
+This article provides an in-depth look at the Unite YAML programming language / configuration and  its core programming concepts.
 
-This article will be broken into the following areas:
+## Overview
+
+This article provides guidance on the Unite development language, it's schema, programming concepts, specialisations & substitutions. After reading this article you should have an understanding around the coding principals of Unite and the ability to build complex applications easily.
+
+This article will be broken into the following areas::
+
+## The YAML schema
+This document contains schema for Unite YAML files as well as core default values for base pipes:
+
+- [[programming-concepts/schema.md|# Unite YAML development language schema]]
+	- [[#SCHEMA#EndPoints|EndPoints]]
+	- [[#SCHEMA#Connections|Connections]]
+	- [[#SCHEMA#Connectors|Connectors]]
+	- [[#SCHEMA#Pipes|Pipes]]
+	- [[#SCHEMA#Strategies|Strategies]]
+- [[#Variant Core Pipes|Variant core pipes schema]]
+	- [[#Variant Core Pipes#Variant Pipe|VariantPipe]]
+	- [[#Variant Core Pipes#Variant Conditional Pipe|VariantConditionalPipe]]
+	- [[#Variant Core Pipes#Variant Conditional Scoped Pipe|VariantConditionalScoped Pipe]]
+	- [[#Variant Core Pipes#ContinuationPolicy|ContinuationPolicy]]
+
+## Programming concepts
+This section deals with how the Unite YAMl language handles common programming language concepts around process flow and execution. 
+
+    - Exception handling
+    - Substitutions
+    - foreach / iterations
+    - Pipe execution
+    - Code blocks / Grouped pipes
+    - Specializations
+
+
+Substitutions
+
+Specialisations
+
 
 Reuse, Reuse, reuse
 

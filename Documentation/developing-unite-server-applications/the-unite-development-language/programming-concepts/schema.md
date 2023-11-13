@@ -1,6 +1,18 @@
 # UNITE YAML DEVELOPMENT LANGUAGE SCHEMA REFERENCE
 
-This document outlines a general structure and explains the fields of the provided Unite services YAML file.
+This document outlines a general structure and explains the default fields of the provided Unite services YAML file and the core default properties found in those types.
+
+- [[#SCHEMA|SCHEMA]]
+	- [[#SCHEMA#EndPoints|EndPoints]]
+	- [[#SCHEMA#Connections|Connections]]
+	- [[#SCHEMA#Connectors|Connectors]]
+	- [[#SCHEMA#Pipes|Pipes]]
+	- [[#SCHEMA#Strategies|Strategies]]
+- [[#Variant Core Pipes|Variant Core Pipes]]
+	- [[#Variant Core Pipes#Variant Pipe|Variant Pipe]]
+	- [[#Variant Core Pipes#Variant Conditional Pipe|Variant Conditional Pipe]]
+	- [[#Variant Core Pipes#Variant Conditional Scoped Pipe|Variant Conditional Scoped Pipe]]
+	- [[#Variant Core Pipes#ContinuationPolicy|ContinuationPolicy]]
 
 ## SCHEMA
 

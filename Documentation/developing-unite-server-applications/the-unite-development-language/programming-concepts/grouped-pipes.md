@@ -1,5 +1,4 @@
-### Pipe groupings
-
+# Code blocks / grouped pipes
 
 
 Connections and endpoints possess a pipeline property containing a collection of pipes through which data flows in the form of an IVariantMessage. There are three distinct types of pipe sequences available:
