@@ -1,12 +1,10 @@
 # Specialisations and Derivatives
 
-
 - [[#Pipe Specialisation|Pipe Specialisation]]
 - [[#Process Specialisations|Process Specialisations]]
 - [[#Process Specialisations With Implementation Injection|Process Specialisations With Implementation Injection]]
 - [[#Code stack, replacements, defaults and pitfalls|Code stack, replacements, defaults and pitfalls]]
 - [[## The HttpPushMessageStrategyPipe Pipe|The Variant.Core.HttpPushMessageStrategyPipe pipe]]
-
 
 ### Overview 
 
@@ -20,7 +18,7 @@ Specialisation come in 3 forms:
 
 We shall go through each of these in detail then go further into into the code stack, replacements, defaults and describe some of the pitfalls that may arise.
 
-> [!Note] Versioned local extension packages are a great location to store any specialisations that can be considered a cross cutting functionality. For example, this can range from common endpoint clients / pipes that send a message to an email API or direct call to the an email queue. 
+> [!Note] Versioned local extension packages are a great location to store any specialisations that can be considered a cross cutting functionality. For example, this can range from common endpoint clients / pipes that  simplify sending  a message to an API or direct call to the a  queue or file system. 
 
 ### Pipe Specialisation
 

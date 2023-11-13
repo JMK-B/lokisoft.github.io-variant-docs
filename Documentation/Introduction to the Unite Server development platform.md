@@ -1,7 +1,36 @@
- # The Unite Server platform
 
-> [!HINT]
-> asdasdasdasd
+The Unite server platform is a YAML configuration based integration platform as a service (iPaaS). Its online development environment allows users to create all types of backend services without the need for a local development environment.
+
+Introduction to developing Unite Server applications
+- [Getting started](getting-started.md)
+- [Developing Unite Server applications](Documentation/developing-unite-server-applications/index.md)
+- [Testing Unite Server applications](testing-applications/testing-applications.md) 
+- [Integrating your domain specific code through extension packages](extension-packages.md)
+
+The Unte
+
+
+
+
+###  Benefits of the platform
+* Online text based development platform
+* All applications created are run on your servers under your control (although hosting options are available)
+* * Common structure to all types of applications allow an inbuilt and common approach and inbuilt functionality for :
+	* Instrumentation
+	* Application settings
+	* Secure settings
+	* Deployments 
+* Shared functionality and settings across or your services
+* Inbuilt reuse framework  
+* All applications are hosted as they would be in production. 
+* Continuous development - See new or updated APIs,  listeners or code changes immediately in your running online service.
+* Integrated testing suite
+* You application is Host agnostic and runtimes for different hosts is managed through extension packages 
+
+
+
+Developing applications
+
 
 
 - Overview:
@@ -10,7 +39,7 @@
   - Deployment
   - Subscription Management
 - [Getting started](getting-started.md)
-- [Developing Unite Server applications](developing-unite-server-applications.md)
+- [Developing Unite Server applications](Documentation/developing-unite-server-applications/index.md)
 - API reference
   - Updating GIT tokens
   - Adding Primary class extension packages extensions
@@ -30,7 +59,6 @@ The Unite server platform is a YAML configuration based integration platform as 
 - Benefits
   - Automation
   - Reuse at every level. Generic strategies, pipes & connectors. The more you use it the quicker development will be.
-  - All applications are run on your servers under your control(when not self hosted)
   - Includes testing suite that allows integration and unit tests to be done.
   - Text YAML based with full word completion.
   - All be done through a browser
