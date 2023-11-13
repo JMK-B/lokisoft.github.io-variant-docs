@@ -4,8 +4,8 @@ This section will first introduce you to The Unite Server platform and it's mult
 
 Take you first steps in Unite Server development:
 
-- [Prerequisites](prerequisites.md)
+- [Prerequisites](Documentation/getting-started/prerequisites/_index.md)
 - [The Unite Server development portal](the-unite-development-portal.md)
-- [Build a real world API application](build-a-real-world-api-application.md)
+- [Build a real world API application](Documentation/getting-started/build-a-real-world-api-application/_index.md)
 
 > Note: For further examples, such as integrating with Azure's key products see the 'Azure integration - how to' examples..

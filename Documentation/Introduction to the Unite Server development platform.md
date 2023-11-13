@@ -2,12 +2,10 @@
 The Unite server platform is a YAML configuration based integration platform as a service (iPaaS). Its online development environment allows users to create all types of backend services without the need for a local development environment.
 
 Introduction to developing Unite Server applications
-- [Getting started](getting-started.md)
-- [Developing Unite Server applications](Documentation/developing-unite-server-applications/index.md)
-- [Testing Unite Server applications](testing-applications/testing-applications.md) 
-- [Integrating your domain specific code through extension packages](extension-packages.md)
+- [Getting started](Documentation/getting-started/_index.md)
+- [Developing Unite Server applications](Documentation/developing-unite-server-applications/_index.md)
 
-The Unte
+- [Platform APIs](apis/_index.md)
 
 
 
@@ -34,12 +32,12 @@ Developing applications
 
 
 - Overview:
-- [[Your subscription]]
+- [[Documentation/subscriptions/_index]]
   - Architecture (How files are stored)
   - Deployment
   - Subscription Management
-- [Getting started](getting-started.md)
-- [Developing Unite Server applications](Documentation/developing-unite-server-applications/index.md)
+- [Getting started](Documentation/getting-started/_index.md)
+- [Developing Unite Server applications](Documentation/developing-unite-server-applications/_index.md)
 - API reference
   - Updating GIT tokens
   - Adding Primary class extension packages extensions

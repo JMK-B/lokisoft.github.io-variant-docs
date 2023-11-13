@@ -1,16 +1,60 @@
 {
   "recentFiles": [
     {
-      "basename": "unite-development-language",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/unite-development-language.md"
+      "basename": "_index",
+      "path": "Documentation/apis/_index.md"
     },
     {
-      "basename": "index",
-      "path": "Documentation/developing-unite-server-applications/index.md"
+      "basename": "Introduction to the Unite Server development platform",
+      "path": "Documentation/Introduction to the Unite Server development platform.md"
     },
     {
-      "basename": "extension-packages",
-      "path": "Documentation/developing-unite-server-applications/extension-packages/extension-packages.md"
+      "basename": "_index",
+      "path": "Documentation/developing-unite-server-applications/_index.md"
+    },
+    {
+      "basename": "creating-api-applications",
+      "path": "Documentation/developing-unite-server-applications/creating-api-applications/creating-api-applications.md"
+    },
+    {
+      "basename": "_index",
+      "path": "Documentation/getting-started/build-a-real-world-api-application/_index.md"
+    },
+    {
+      "basename": "_index",
+      "path": "Documentation/getting-started/prerequisites/_index.md"
+    },
+    {
+      "basename": "_index",
+      "path": "Documentation/getting-started/_index.md"
+    },
+    {
+      "basename": "_index",
+      "path": "Documentation/subscriptions/_index.md"
+    },
+    {
+      "basename": "ToDo",
+      "path": "ToDo.md"
+    },
+    {
+      "basename": "_index",
+      "path": "Documentation/developing-unite-server-applications/testing-applications/_index.md"
+    },
+    {
+      "basename": "debugging-applications",
+      "path": "Documentation/developing-unite-server-applications/debugging-applications.md"
+    },
+    {
+      "basename": "Instrumentation",
+      "path": "Documentation/developing-unite-server-applications/Instrumentation.md"
+    },
+    {
+      "basename": "_index",
+      "path": "Documentation/developing-unite-server-applications/extension-packages/_index.md"
+    },
+    {
+      "basename": "_index",
+      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/_index.md"
     },
     {
       "basename": "schema",
@@ -25,36 +69,8 @@
       "path": "Documentation/developing-unite-server-applications/the-unite-development-language/substitutions.md"
     },
     {
-      "basename": "debugging-applications",
-      "path": "Documentation/developing-unite-server-applications/debugging-applications.md"
-    },
-    {
-      "basename": "Instrumentation",
-      "path": "Documentation/developing-unite-server-applications/Instrumentation.md"
-    },
-    {
-      "basename": "apis",
-      "path": "Documentation/Apis/apis.md"
-    },
-    {
-      "basename": "Introduction to the Unite Server development platform",
-      "path": "Documentation/Introduction to the Unite Server development platform.md"
-    },
-    {
-      "basename": "build-a-real-world-api-application",
-      "path": "Documentation/getting-started/build-a-real-world-api-application/build-a-real-world-api-application.md"
-    },
-    {
-      "basename": "getting-started",
-      "path": "Documentation/getting-started/getting-started.md"
-    },
-    {
       "basename": "the-unite-development-portal",
       "path": "Documentation/getting-started/the-unite-development-portal/the-unite-development-portal.md"
-    },
-    {
-      "basename": "prerequisites",
-      "path": "Documentation/getting-started/prerequisites/prerequisites.md"
     },
     {
       "basename": "Overview 1",
@@ -63,18 +79,6 @@
     {
       "basename": "Overview",
       "path": "Overview.canvas"
-    },
-    {
-      "basename": "ToDo",
-      "path": "ToDo.md"
-    },
-    {
-      "basename": "index",
-      "path": "Documentation/testing-applications/index.md"
-    },
-    {
-      "basename": "creating-api-applications",
-      "path": "Documentation/developing-unite-server-applications/creating-api-applications/creating-api-applications.md"
     },
     {
       "basename": "programming-concepts",
