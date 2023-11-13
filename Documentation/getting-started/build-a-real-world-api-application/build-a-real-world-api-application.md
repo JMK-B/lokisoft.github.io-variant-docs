@@ -4,17 +4,17 @@ In this example we'll for through the steps of creating a simple bank holiday se
 
 This will be done in 4 parts where we first create a blank service and deploy it and then add more functionality with each further steps.
 
-- [Building a Unite API application from start to finish](#building-a-unite-api-application-from-start-to-finish)
-  - [Step 1: Creating and deploying a templated Unite (Function App) into Azure](#step-1-creating-and-deploying-a-templated-unite-function-app-into-azure)
-  - [Step 2: Calling an external Http endpoint](#step-2-calling-an-external-http-endpoint)
-  - [Step 3: Returning regional dates only with caching and retries](#step-3-returning-regional-dates-only-with-caching-and-retries)
-  - [Step 4: Adding the option to return the dates as CSV](#step-4-adding-the-option-to-return-the-dates-as-csv)
-  - [Step 4: Adding the option to return the dates as CSV](## step-4-adding-the-option-to-return-the-dates-as-csv)
+- [[#Step 1 Creating and deploying a templated Unite (Function App) into Azure|Step 1 Creating and deploying a templated Unite (Function App) into Azure]]
+- [[#Step 2: Calling an external Http endpoint|Step 2: Calling an external Http endpoint]]
+- [[#Step 3: Returning regional dates only with caching and retries|Step 3: Returning regional dates only with caching and retries]]
+- [[#Step 4: Adding the option to return the dates as CSV|Step 4: Adding the option to return the dates as CSV]]
 
-## Step 1: Creating and deploying a templated Unite (Function App) into Azure
+## Step 1 Creating and deploying a templated Unite (Function App) into Azure
 
 1. Go to the services page a click 'Create new service'.
 1. Fill in the form as below and click Ok. The short name is used in conjunction with the subscription name to define what the service URL will be named as. This name will be prefixed with 12 character random string to provide the full name as will be seen later.
+
+
 
 ![](step1-create-service.png)
 

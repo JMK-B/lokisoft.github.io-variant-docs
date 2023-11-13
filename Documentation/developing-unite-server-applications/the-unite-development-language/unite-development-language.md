@@ -75,14 +75,6 @@ And each of these can either be strategised or none strategised.
 
 NAMESPACE common property
 
-## Programming constructs
-
-Like all programming languages the Unite development language is built from 4 common building blocks:
-
-- **Sequence**: Sequence is the order in which instructions occur and are processed.
-- **Selection**: Selection determines which path a program takes when it is running.
-- **Iteration**: Iteration is the repeated execution of a section of code when a program is running.
-- **Exception handling**:
 
 ####################################################################################
 

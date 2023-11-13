@@ -1,27 +1,15 @@
 # Developing Unite Server applications
 
-## Creating a application
+After reading this section the user should have a firm grasp of t      he concepts of Unite Server, the development and release process and an understanding on the Unite YAML development language.  The 4 main areas that will be covered are:
 
-## A brief anatomy of a Unite service application
+* *[Design principals](design-principals.md): This will introduce the user to the concepts of a Unite application and a brief look at some of the features.
+* [The anatomy of a Unite Server application](the-anatomy-of-a-unite-server-application.md): Here we'll look at the file structure and constituent parts of a Unite Server application. This will include the core concepts of the YAML development language such as connectors, endpoints, pipes and strategies.
+* [Specialisations and derivatives](specialisations-and-derivatives.md): This is the core feature of Unite that provides reuse capabilities and across all connectors, pipes and strategies.
+* [unite-development-language](unite-development-language.md): This section provides a look at the syntax and workings of the  YAML development language and explains how to perform common programming tasks such as iteration, program flow, exceptions handling, substitutions, etc.
 
-- Overview & Startup sequence
-  - Design Principals
-  - IUniteMessage
-  - Unite's YAML Programming Language
-    - Overview
-    - Strategies
-    - Connectors
-    - Endpoints
-    - Pipes & strategies
-  - Extending the platform using extension packages
-    - Overview
-    - .Net Assemblies & YAML
-    - YAML Only
+' ######################################################################
+ENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND'
 
-A Variant aApplication
-
-Overview
-Variant creates applications called Variant applications. These can be either workflow applications, such as event driven or timer driven applications or 
 
 ## The Unite YAML development language
 
