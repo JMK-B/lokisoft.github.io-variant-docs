@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "ToDo2",
+      "path": "ToDo2.md"
+    },
+    {
       "basename": "_index",
       "path": "Documentation/apis/_index.md"
     },
@@ -31,10 +35,6 @@
     {
       "basename": "_index",
       "path": "Documentation/subscriptions/_index.md"
-    },
-    {
-      "basename": "ToDo",
-      "path": "ToDo.md"
     },
     {
       "basename": "_index",
