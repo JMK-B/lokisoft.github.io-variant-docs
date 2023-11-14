@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "_index",
+      "path": "Documentation/developing-unite-server-applications/_index.md"
+    },
+    {
       "basename": "state",
       "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/state.md"
     },
@@ -11,10 +15,6 @@
     {
       "basename": "instrumentation",
       "path": "Documentation/developing-unite-server-applications/instrumentation.md"
-    },
-    {
-      "basename": "_index",
-      "path": "Documentation/developing-unite-server-applications/_index.md"
     },
     {
       "basename": "conditional-flow",
