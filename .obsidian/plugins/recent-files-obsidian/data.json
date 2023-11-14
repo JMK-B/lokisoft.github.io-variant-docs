@@ -2,91 +2,55 @@
   "recentFiles": [
     {
       "basename": "_index",
+      "path": "Documentation/developing-unite-server-applications/testing-applications/_index.md"
+    },
+    {
+      "basename": "_index",
       "path": "Documentation/developing-unite-server-applications/_index.md"
-    },
-    {
-      "basename": "state",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/state.md"
-    },
-    {
-      "basename": "substitutions",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/substitutions.md"
-    },
-    {
-      "basename": "instrumentation",
-      "path": "Documentation/developing-unite-server-applications/instrumentation.md"
-    },
-    {
-      "basename": "conditional-flow",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/conditional-flow.md"
-    },
-    {
-      "basename": "_index",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/_index.md"
-    },
-    {
-      "basename": "grouped-pipes",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/grouped-pipes.md"
-    },
-    {
-      "basename": "exception-handling",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/exception-handling.md"
-    },
-    {
-      "basename": "_index",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/_index.md"
-    },
-    {
-      "basename": "ToDo2",
-      "path": "ToDo2.md"
-    },
-    {
-      "basename": "_index",
-      "path": "Documentation/apis/_index.md"
     },
     {
       "basename": "Introduction to the Unite Server development platform",
       "path": "Documentation/Introduction to the Unite Server development platform.md"
     },
     {
-      "basename": "creating-api-applications",
-      "path": "Documentation/developing-unite-server-applications/creating-api-applications/creating-api-applications.md"
+      "basename": "_index",
+      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/_index.md"
     },
     {
       "basename": "_index",
-      "path": "Documentation/getting-started/build-a-real-world-api-application/_index.md"
+      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/_index.md"
+    },
+    {
+      "basename": "the-anatomy-of-a-unite-server-application",
+      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/the-anatomy-of-a-unite-server-application.md"
+    },
+    {
+      "basename": "design-principals",
+      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/design-principals.md"
     },
     {
       "basename": "_index",
-      "path": "Documentation/getting-started/prerequisites/_index.md"
+      "path": "Documentation/Apis/_index.md"
     },
     {
-      "basename": "_index",
-      "path": "Documentation/getting-started/_index.md"
+      "basename": "speciailiedPipe",
+      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/Images/speciailiedPipe.png"
     },
     {
-      "basename": "_index",
-      "path": "Documentation/subscriptions/_index.md"
+      "basename": "exception-handling",
+      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/exception-handling.md"
     },
     {
-      "basename": "_index",
-      "path": "Documentation/developing-unite-server-applications/testing-applications/_index.md"
+      "basename": "iteration",
+      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/iteration.md"
     },
     {
-      "basename": "debugging-applications",
-      "path": "Documentation/developing-unite-server-applications/debugging-applications.md"
+      "basename": "Unite documentation",
+      "path": "Documentation/Canvas/Unite documentation.canvas"
     },
     {
-      "basename": "_index",
-      "path": "Documentation/developing-unite-server-applications/extension-packages/_index.md"
-    },
-    {
-      "basename": "schema",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/schema.md"
-    },
-    {
-      "basename": "specialisations-and-derivatives",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/specialisations-and-derivatives.md"
+      "basename": "Pasted image 20231111114644",
+      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/attachments/Pasted image 20231111114644.png"
     },
     {
       "basename": "the-unite-development-portal",
@@ -101,32 +65,8 @@
       "path": "Overview.canvas"
     },
     {
-      "basename": "the-anatomy-of-a-unite-server-application",
-      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/the-anatomy-of-a-unite-server-application.md"
-    },
-    {
-      "basename": "iteration",
-      "path": "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/iteration.md"
-    },
-    {
       "basename": "Intro",
       "path": "Business plan/Intro.md"
-    },
-    {
-      "basename": "Unite documentation",
-      "path": "Documentation/Canvas/Unite documentation.canvas"
-    },
-    {
-      "basename": "design-principals",
-      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/design-principals.md"
-    },
-    {
-      "basename": "speciailiedPipe",
-      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/Images/speciailiedPipe.png"
-    },
-    {
-      "basename": "Pasted image 20231111114644",
-      "path": "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/attachments/Pasted image 20231111114644.png"
     }
   ],
   "omittedPaths": [],
