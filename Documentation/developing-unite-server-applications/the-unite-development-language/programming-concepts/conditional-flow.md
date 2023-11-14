@@ -1,6 +1,18 @@
-### Selection
+# Conditional flow
 
-All pipes, bar the debugging / diagnostic pipes, have the ability to determine whether they should be run or not. This functionality is added when they are derived from the VariantConditionalPipe or VariantConditionalScopedPipe (if they are a scoped pipe). Conditional pipes have 4 additional settings that can be used to control the execution flow and any return values. These settings are:
+There are 2 types of execution flow management in Unite. Runtime and compile time.  This document explains both and provides examples.
+
+- [[#Runtime execution|Runtime execution]]
+	- [[#Runtime execution#The CAN_EXECUTE_EXPRESSION setting|The CAN_EXECUTE_EXPRESSION setting]]
+	- [[#Runtime execution#The CAN_EXECUTE_STRATEGY setting|The CAN_EXECUTE_STRATEGY setting]]
+	- [[#Runtime execution#The EXECUTION_FLOW_STRATEGY setting|The EXECUTION_FLOW_STRATEGY setting]]
+	- [[#Runtime execution#The CONTINUATION_POLICY setting|The CONTINUATION_POLICY setting]]
+- [[#Compile time trimming|Compile time trimming]]
+	- [[#Compile time trimming#Substitution expression examples|Substitution expression examples]]
+
+## Runtime execution
+
+All pipes, bar the debugging / diagnostic pipes, have the ability to determine whether they should be run or not. This functionality is added when they are derived from the VariantConditionalPipe or VariantConditionalScopedPipe (if they are a scoped pipe) .NET class. Conditional pipes have 4 additional settings that can be used to control the execution flow and any return values. These settings are:
 
 - CAN_EXECUTE_EXPRESSION
 - CAN_EXECUTE_STRATEGY
@@ -11,7 +23,7 @@ The rest of this section gives a description of the settings and a representatio
 
 > NOTE: in the code examples below exceptions are seen to be caught and thrown. These are there to make the code easier to understand. Under the covers Unite uses a PipeResult structure to determine flow as exceptions can be detrimental to performance and throughput..
 
-##### The CAN_EXECUTE_EXPRESSION setting
+### The CAN_EXECUTE_EXPRESSION setting
 
 This setting is a string that is commonly used in conjunction with substitution, substitution methods and app settings can can be seen to be the contents of an 'if' statement. E.g.:
 
@@ -59,7 +71,7 @@ This example sets the Response header only if the MySetting header is not null
   VALUE: The Response is set to this message 'MySetting' is not null
 ```
 
-##### The CAN_EXECUTE_STRATEGY setting
+### The CAN_EXECUTE_STRATEGY setting
 
 These are strategies that are derived from the ICanExecuteStrategy interface and allows for a more business specific run conditions. Whenever the CAN_EXECUTION_EPRESSION is used Unite wraps this in the DefaultCanExecuteStrategy.
 
@@ -88,7 +100,7 @@ This example restricts the same error from being sent to an error notification e
     Error: ${ErrorId}
 ```
 
-##### The EXECUTION_FLOW_STRATEGY setting
+### The EXECUTION_FLOW_STRATEGY setting
 
 Provides a granular approach for setting return values when the continuation has been blocked. These are:
 
@@ -99,7 +111,7 @@ Provides a granular approach for setting return values when the continuation has
 
 BreakPipes are a primary way the platform manages execution flow and returning error messages and error codes. Examples can be seen in the next section [BreakPipes](#breakpipes)
 
-##### The CONTINUATION_POLICY setting
+#### The CONTINUATION_POLICY setting
 
 This property determines is the core property that determines what the flow is dependent on the result of the pipe. There are 4 values that the property can be and these can be seen from the following enum:
 
@@ -120,7 +132,7 @@ public enum ContinuationPolicy
 }
 ```
 
-###### CONTINUATION_POLICY: Default
+#### CONTINUATION_POLICY: Default
 
 ```csharp
 //CONTINUATION_POLICY: Default
@@ -133,7 +145,7 @@ if(CAN_EXECUTE_EXPRESSION == null || CAN_EXECUTE_EXPRESSION == true || (CAN_EXEC
 // Run next sibling pipe
 ```
 
-###### CONTINUATION_POLICY: ReturnIfExecuted
+#### CONTINUATION_POLICY: ReturnIfExecuted
 
 ```csharp
 //CONTINUATION_POLICY: ReturnIfExecuted
@@ -150,7 +162,7 @@ if(CAN_EXECUTE_EXPRESSION == null || CAN_EXECUTE_EXPRESSION == true || (CAN_EXEC
 
 > NOTE: When used in conjunction with a DefaultScopedPipe you can get the same functionality as a switch statement.
 
-###### CONTINUATION_POLICY: ContinueOnError
+#### CONTINUATION_POLICY: ContinueOnError
 
 ```csharp
 //CONTINUATION_POLICY: ContinueOnError
@@ -162,7 +174,7 @@ if(CAN_EXECUTE_EXPRESSION == null || CAN_EXECUTE_EXPRESSION == true || (CAN_EXEC
 // Run next sibling pipe
 ```
 
-###### CONTINUATION_POLICY: ReturnOnSuccess
+#### CONTINUATION_POLICY: ReturnOnSuccess
 
 ```csharp
 //CONTINUATION_POLICY: ReturnOnSuccess
@@ -254,3 +266,33 @@ if(CAN_EXECUTE_EXPRESSION== null || CAN_EXECUTE_EXPRESSION == true || CAN_EXECUT
 
 // Run next sibling pipe
 ```
+
+## Compile time trimming
+
+ All connectors and pipes have a property called IS_ENABLED. This allows the developer to not include the object when the application is instantiated. This is normally used, but not limited to,  the remove items from certain environments such as dev, test or prod.   The allowed values for this setting are:
+ * **'null':** The object is included at compilation.
+ * **True or False:** If true the object is included at compilation otherwise its ignore.
+ * A substitution expression:  Substitutions are allowed here but the expression  must return a  true or false value.
+
+### Substitution expression examples
+
+```yaml
+# Simple checks
+IS_ENABLED: $[Variant.Environment.Type] != "dev"
+IS_ENABLED: $[FeatureFlag.SendEmails] == true
+IS_ENABLED: ${Variant.Environment.Type.ToUppper()} != "DEV"
+IS_ENABLED: ${DateTimeOffset.Now} > '2023/1/1'
+IS_ENABLED: ${DateTime.Now} <= '2023/1/1'           
+
+# Nested and multiple checks
+IS_ENABLED: $[FeatureFlag.SendEmails] && $[Variant.Environment.Type] == 'dev'] 
+IS_ENABLED: ($[FeatureFlag.SendEmails] && $[Variant.Environment.Type] == 'dev']) || $[FeatureFlag.RunAll]
+v"
+
+```
+
+
+> [!Note] As the check is done at compile time the only substitutions that can be used are application settings $[xxx] and values that are not bound to a specific message such as ${DateTime}.  DateTime checks however, require the service to be started to take affect. 
+
+
+
