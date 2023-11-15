@@ -17,10 +17,6 @@
       "path": "Documentation/Introduction to the Unite Server development platform.md"
     },
     {
-      "basename": "debugging-applications",
-      "path": "Documentation/developing-unite-server-applications/debugging-applications.md"
-    },
-    {
       "basename": "_index",
       "path": "Documentation/developing-unite-server-applications/testing-applications/_index.md"
     },

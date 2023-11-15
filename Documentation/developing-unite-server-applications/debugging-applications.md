@@ -1,4 +1,0 @@
-
-# Debugging applications
-
-#unfinished 
