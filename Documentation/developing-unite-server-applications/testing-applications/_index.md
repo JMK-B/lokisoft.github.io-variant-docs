@@ -1,3 +1,6 @@
+
+# Testing Unite applications
+- [[#Overview|Overview]]
 - [[#Unite Server Testing platform framework|Unite Server Testing platform framework]]
 	- [[#Unite Server Testing platform framework#UI Test results page|UI Test results page]]
 	- [[#Unite Server Testing platform framework#Application test endpoints|Application test endpoints]]
@@ -10,9 +13,6 @@
 	- [[#Writing application tests#Creating an API end to end test|Creating an API end to end test]]
 
 
-
-
-# Testing Unite applications
 
 # Overview
 
@@ -209,7 +209,7 @@ The ASSERT_EXPRESSION property must  return a Boolean value. It can contain mult
 
 > [!Tip]  For more examples of tests see the Tests yaml file in a newly created service. 
 
-The full api/integrationtests endpoint would be :
+The full api/integrationtests endpoint would be: 
 ```yaml
     #
     # Called by system UI to run tests
