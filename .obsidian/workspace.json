@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Documentation/developing-unite-server-applications/extension-packages/_index.md",
+                "file": "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/_index.md",
                 "mode": "source",
                 "source": false
               }
@@ -38,7 +38,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "IS_ENABLED",
+                "query": "specialise",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Documentation/developing-unite-server-applications/extension-packages/_index.md",
+                "file": "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/_index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +112,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Documentation/developing-unite-server-applications/extension-packages/_index.md",
+                "file": "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/_index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +135,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Documentation/developing-unite-server-applications/extension-packages/_index.md"
+                "file": "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/_index.md"
               }
             }
           },
@@ -160,7 +160,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "Documentation/developing-unite-server-applications/extension-packages/_index.md",
+                "file": "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/_index.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -183,7 +183,7 @@
                   "repelStrength": 10,
                   "linkStrength": 1,
                   "linkDistance": 250,
-                  "scale": 1.0534979423868318,
+                  "scale": 0.7514342322277582,
                   "close": false
                 }
               }
@@ -207,54 +207,55 @@
   },
   "active": "17b4167d8eb798f8",
   "lastOpenFiles": [
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116150244.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116150207.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116150056.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116145911.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116145809.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116145747.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116145635.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116145613.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116145101.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116145050.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments/Pasted image 20231116144910.png",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/_index.md",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages/attachments",
+    "Documentation/developing-unite-server-applications/extension-packages/creating-zip-based-extension-packages/_index.md",
+    "Documentation/developing-unite-server-applications/extension-packages/_index.md",
     "Documentation/developing-unite-server-applications/_index.md",
-    "Documentation/developing-unite-server-applications/instrumentation.md",
+    "Documentation/developing-unite-server-applications/extension-packages/creating-zip-based-extension-packages",
+    "Documentation/developing-unite-server-applications/extension-packages/creating ui-based-extension-packages",
+    "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/the-anatomy-of-a-unite-server-application.md",
+    "Documentation/developing-unite-server-applications/the-unite-development-language/specialisations-and-derivatives.md",
+    "Documentation/developing-unite-server-applications/extension-packages/attachments",
+    "TODO.md",
     "Documentation/Introduction to the Unite Server development platform.md",
+    "Documentation/developing-unite-server-applications/instrumentation.md",
     "Documentation/developing-unite-server-applications/debugging-applications.md",
     "Documentation/developing-unite-server-applications/testing-applications/_index.md",
-    "Documentation/developing-unite-server-applications/testing-applications/attachments/Pasted image 20231115101319.png",
-    "Documentation/developing-unite-server-applications/testing-applications/attachments/Pasted image 20231114144056.png",
-    "Documentation/developing-unite-server-applications/testing-applications/attachments/Pasted image 20231114144521.png",
-    "Documentation/developing-unite-server-applications/testing-applications/attachments/Pasted image 20231115100438.png",
-    "Documentation/developing-unite-server-applications/testing-applications/attachments/Pasted image 20231115100142.png",
-    "Documentation/developing-unite-server-applications/testing-applications/attachments/Pasted image 20231115095858.png",
     "Documentation/subscriptions/_index.md",
     "Documentation/developing-unite-server-applications/testing-applications/attachments",
     "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/state.md",
     "Documentation/developing-unite-server-applications/the-unite-development-language/substitutions.md",
-    "Documentation/developing-unite-server-applications/attachments/Pasted image 20231114114220.png",
-    "Documentation/developing-unite-server-applications/attachments/Pasted image 20231114113522.png",
-    "Documentation/developing-unite-server-applications/attachments/Pasted image 20231114113108.png",
-    "Documentation/developing-unite-server-applications/attachments/Pasted image 20231114110133.png",
     "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/conditional-flow.md",
     "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/_index.md",
     "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/grouped-pipes.md",
     "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/exception-handling.md",
     "Documentation/developing-unite-server-applications/the-unite-development-language/_index.md",
-    "TODO.md",
     "ToDo2.md",
     "Documentation/apis/_index.md",
     "Documentation/developing-unite-server-applications/creating-api-applications/creating-api-applications.md",
     "Documentation/getting-started/build-a-real-world-api-application/_index.md",
     "Documentation/getting-started/prerequisites/_index.md",
     "Documentation/getting-started/_index.md",
-    "apis/_index.md",
     "apis",
-    "Documentation/testing-applications/index.md",
     "Documentation/developing-unite-server-applications/testing-applications",
-    "testing-cpplications/_index.md",
     "testing-cpplications",
-    "Documentation/developing-unite-server-applications/extension-packages/_index.md",
-    "Documentation/developing-unite-server-applications/the-unite-development-language/schema.md",
     "Overview 1.canvas",
     "Overview.canvas",
     "Documentation/developing-unite-server-applications/creating-api-applications",
     "Documentation/developing-unite-server-applications/the-unite-development-language/programming-concepts/attachments",
-    "Documentation/testing-applications",
     "Documentation/Canvas/Unite documentation.canvas",
-    "Documentation/developing-unite-server-applications/attachments",
-    "Documentation/developing-unite-server-applications/the-anatomy-of-a-unite-service/attachments",
-    "Business plan",
     "Untitled 1.canvas"
   ]
 }

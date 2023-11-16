@@ -4,6 +4,7 @@ The Unite server platform is a YAML configuration based integration platform as 
 Introduction to developing Unite Server applications
 - [Getting started](Documentation/getting-started/_index.md)
 - [Developing Unite Server applications](Documentation/developing-unite-server-applications/_index.md)
+- [Extending the platform using Domain specific packages]
 
 - [Platform APIs](apis/_index.md)
 
