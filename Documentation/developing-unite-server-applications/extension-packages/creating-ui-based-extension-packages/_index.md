@@ -2,9 +2,13 @@
 
 UI based extension packages contain only YAML files and as such can be created using Unite's development platform UI. This document will go through how to build subscription scoped packages. 
 
+- [[#Step 1:  Creating the extension|Step 1:  Creating the extension]]
+- [[#Step 2: Importing the package|Step 2: Importing the package]]
+- [[#Step 3: Adding functionality|Step 3: Adding functionality]]
+- [[#Step 4 : Publishing the extension|Step 4 : Publishing the extension]]
+- [[#Step 5: Creating a new version|Step 5: Creating a new version]]
 
-# Step 1:  Creating the extension
-
+## Step 1:  Creating the extension
 
 In order to create an extension package we need to got to the 'Extensions' page and set the dropdown to Local and click on the 'Create new extension button'. After this you should now see the following: 
 
@@ -54,23 +58,22 @@ When we  goto our application  we can  use that  pipe as if it was in the applic
 > [!Note] After saving, adding or deleting an extension package file you may need to refresh the page to see the new functionality in the word completion as above. 
 
 
-### Step 4 : Publishing the extension
+## Step 4 : Publishing the extension
+Publishing a local extension package  creates a versioned , immutable library package that can be used across services. Once you have completed the package simply click on the package and click the 'Publish' button.
 
 ![](Pasted%20image%2020231116145613.png)
 
-
-![](Pasted%20image%2020231116145635.png)
-
+Then add a version description and click 'Publish' again.
 
 ![](Pasted%20image%2020231116145747.png)
 
-![](Pasted%20image%2020231116145809.png)
+You should now have an immutable versioned package.
 
+![](Pasted%20image%2020231116145809.png)
 
 ## Step 5: Creating a new version
 
-Remove the extension from application or goto a new application where the extension has not been added. 
-
+To create a new version of the package remove the extension from the application or go to a new application where the extension has not been added. 
 
 ![](Pasted%20image%2020231116145911.png)
 
@@ -79,13 +82,11 @@ Click on the Clone button:
 ![](Pasted%20image%2020231116150056.png)
 
 
-Update the version and click publish. 
-
-If you now install the package you should have 2 versions available:
+Update the version and click publish. If you now install the package you should have 2 versions available:
 
 ![](Pasted%20image%2020231116150207.png)
 
-The new version is now added and has the Asterix next to it denoting the new version is editable. 
+After clicking install, the new version is now added and has the Asterix next to it's name denoting the new version is editable. 
 
 ![](Pasted%20image%2020231116150244.png)
 
