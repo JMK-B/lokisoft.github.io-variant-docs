@@ -10,10 +10,6 @@
     },
     {
       "basename": "_index",
-      "path": "Documentation/developing-unite-server-applications/extension-packages/creating-ui-based-extension-packages/_index.md"
-    },
-    {
-      "basename": "_index",
       "path": "Documentation/developing-unite-server-applications/_index.md"
     },
     {
