@@ -1,0 +1,1 @@
+1. Discard a few items in source control and then try to Paush all on rest .  

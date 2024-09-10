@@ -19,7 +19,7 @@ Local extensions fall into 2 different types: those which are created using the 
 
 ### Creating local extension packages  
 
-* [Creating a UI based extension package](creating-ui-based-extension-packages/_index.md)
+* [Creating a UI based extension package](_index%201.md)
 * [Create a Zip based extension package](creating-zip-based-extension-packages/_index.md)
 
 
